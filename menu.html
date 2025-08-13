@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">🍽️ TRUFFLES</div>
+        <ul>
+            <li><a href="#starters">Starters</a></li>
+            <li><a href="#main-course">Main Course</a></li>
+            <li><a href="#desserts">Desserts</a></li>
+            <li><a href="#special">Chef's Special</a></li>
+        </ul>
+        <div class="cart">
+            🛒 <span class="cart-count">0</span>
+        </div>
+    </nav>
+
+    <header class="header">
+        <h1>Menu</h1>
+        <p>Delicious dishes made with love and fresh ingredients.</p>
+    </header>
+
+    <section id="starters">
+        <h2>🥗 Starters</h2>
+        <div class="menu-grid">
+            <div class="dish-card">
+                <img src="Bruschetta with tomatoes & basil.avif" alt="Bruschetta">
+                <div class="dish-info">
+                    <h3>Bruschetta with Tomatoes & Basil</h3>
+                    <p>₹220</p>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="Fresh garden salad.avif" alt="Fresh garden salad">
+                <div class="dish-info">
+                    <h3>Fresh Garden Salad</h3>
+                    <p>₹180</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="main-course">
+        <h2>🍝 Main Course</h2>
+        <div class="menu-grid">
+            <div class="dish-card">
+                <img src="Spaghetti with tomato sauce.avif" alt="Spaghetti">
+                <div class="dish-info">
+                    <h3>Spaghetti with Tomato Sauce</h3>
+                    <p>₹350</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="desserts">
+        <h2>🍰 Desserts</h2>
+        <div class="menu-grid">
+            <div class="dish-card">
+                <img src="Chocolate cake slice.avif" alt="Chocolate cake">
+                <div class="dish-info">
+                    <h3>Chocolate Cake Slice</h3>
+                    <p>₹150</p>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="Macarons.avif" alt="Macarons">
+                <div class="dish-info">
+                    <h3>Macarons</h3>
+                    <p>₹120</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="special">
+        <h2>👨‍🍳 Chef's Special</h2>
+        <div class="menu-grid">
+            <div class="dish-card special">
+                <img src="Gourmet plated dish.avif" alt="Gourmet Dish">
+                <div class="dish-info">
+                    <h3>Gourmet Plated Dish</h3>
+                    <p>₹450</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button class="order-btn">Place Order</button>
+
+    <script>
+        const cartCount = document.querySelector(".cart-count");
+        const dishes = document.querySelectorAll(".dish-card");
+        dishes.forEach(dish => {
+            dish.addEventListener("click", () => {
+                let count = parseInt(cartCount.textContent);
+                cartCount.textContent = count + 1;
+            });
+        });
+    </script>
+</body>
+</html>
